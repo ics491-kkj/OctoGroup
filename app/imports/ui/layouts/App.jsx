@@ -6,7 +6,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import NavBarTop from '../components/NavBarTop';
 import NavBarBottom from '../components/NavBarBottom';
-import Chatbot from '../components/Chatbot';
+import FooterMenu from '../components/FooterMenu';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import NotFound from '../pages/NotFound';
@@ -23,7 +23,7 @@ class App extends React.Component {
             <Route exact path="/" component={Landing}/>
             <Route component={NotFound}/>
           </Switch>
-          <Chatbot/>
+          <FooterMenu/>
           <Footer/>
         </div>
       </Router>

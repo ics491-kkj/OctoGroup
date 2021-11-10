@@ -7,6 +7,7 @@ class NavBarBottom extends React.Component {
   render() {
     const menuStyle = {
       margin: '0px',
+      marginBottom: '3em',
       paddingLeft: '3em',
       paddingRight: '3em',
       fontFamily: 'Oswald, Arial, Helvetica, sans-serif',
