@@ -28,5 +28,4 @@ class NavBarTop extends React.Component {
   }
 }
 
-// Enable ReactRouter for this component. https://reacttraining.com/react-router/web/api/withRouter
 export default NavBarTop;

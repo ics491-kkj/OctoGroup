@@ -1,8 +1,8 @@
 import React from 'react';
 import { Label, Placeholder, Segment } from 'semantic-ui-react';
 
-/** A transparent menu that's fixed to the bottom to carry the chatbot button. Rendered by the App Layout component. */
-class Footer extends React.Component {
+/** Temporary solution to filling up the landing page. Where content would be, if time permits. */
+class PlaceholderSegment extends React.Component {
   render() {
     return (
       <Segment raised>
@@ -22,4 +22,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer;
+export default PlaceholderSegment;
