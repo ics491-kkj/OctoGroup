@@ -1,15 +1,18 @@
 import React from 'react';
+import { Segment } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
-    const divStyle = { paddingTop: '15px' };
+    const segStyle = {
+      paddingTop: '15px',
+      paddingLeft: '2em',
+      paddingRight: '2em',
+      background: '#264F8F',
+    };
     return (
-      <footer>
-        <div style={divStyle} className="ui center aligned container">
-          <hr />
-        </div>
-      </footer>
+      <Segment style={segStyle}>
+      </Segment>
     );
   }
 }

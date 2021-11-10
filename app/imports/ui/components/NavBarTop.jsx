@@ -9,18 +9,19 @@ class NavBarTop extends React.Component {
       marginBottom: '0px',
       paddingLeft: '3em',
       fontFamily: 'Oswald, Arial, Helvetica, sans-serif',
+      background: '#3469CA',
     };
     const itemStyle = { paddingLeft: '5px', paddingRight: '5px' };
     const icons = ['facebook', 'twitter', 'youtube', 'dollar', 'instagram'];
 
     return (
-      <Menu style={menuStyle} attached="top" borderless inverted compact color='blue'>
+      <Menu style={menuStyle} attached="top" borderless inverted compact>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
           <Header inverted as='h3'>Connect with us: </Header>
         </Menu.Item>
         {icons.map((iconName) => (
           <Menu.Item key={iconName} style={itemStyle}>
-            <Icon circular inverted color='blue' link={true} name={iconName} />
+            <Icon circular inverted link={true} color='blue' name={iconName} />
           </Menu.Item>
         ))}
       </Menu>
