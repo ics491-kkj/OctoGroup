@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Meteor } from 'meteor/meteor';
-import { withTracker } from 'meteor/react-meteor-data';
-import { withRouter, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Menu, Header, Icon } from 'semantic-ui-react';
 
 /** The NavBarTop appears at the top of every page. Rendered by the App Layout component. */
 class NavBarTop extends React.Component {
   render() {
-    const menuStyle = { marginBottom: '10px',
+    const menuStyle = {
+      marginBottom: '0px',
+      paddingLeft: '3em',
       fontFamily: 'Oswald, Arial, Helvetica, sans-serif',
     };
     const itemStyle = { paddingLeft: '5px', paddingRight: '5px' };
@@ -17,11 +16,11 @@ class NavBarTop extends React.Component {
     return (
       <Menu style={menuStyle} attached="top" borderless inverted compact color='blue'>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header inverted as='h1'>Connect with us: </Header>
+          <Header inverted as='h3'>Connect with us: </Header>
         </Menu.Item>
         {icons.map((iconName) => (
           <Menu.Item key={iconName} style={itemStyle}>
-            <Icon circular link={true} name={iconName} />
+            <Icon circular inverted color='blue' link={true} name={iconName} />
           </Menu.Item>
         ))}
       </Menu>
@@ -29,15 +28,5 @@ class NavBarTop extends React.Component {
   }
 }
 
-// Declare the types of all properties.
-NavBarTop.propTypes = {
-  currentUser: PropTypes.string,
-};
-
-// withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-const NavBarContainer = withTracker(() => ({
-  currentUser: Meteor.user() ? Meteor.user().username : '',
-}))(NavBarTop);
-
 // Enable ReactRouter for this component. https://reacttraining.com/react-router/web/api/withRouter
-export default withRouter(NavBarContainer);
+export default NavBarTop;
