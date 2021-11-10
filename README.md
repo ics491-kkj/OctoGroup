@@ -1,3 +1,2 @@
-![ci-badge](https://github.com/ics-software-engineering/meteor-application-template-react/workflows/ci-meteor-application-template-react/badge.svg)
-
-For details, please see http://ics-software-engineering.github.io/meteor-application-template-react/
+## OctoGroup OHA Chatbot
+A chatbot made to help direct OHA beneficiaries to the resources and services which OHA provides.
