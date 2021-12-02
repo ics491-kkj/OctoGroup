@@ -7,7 +7,6 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBarTop from '../components/NavBarTop';
 import NavBarBottom from '../components/NavBarBottom';
 import FooterMenu from '../components/FooterMenu';
-import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import NotFound from '../pages/NotFound';
 
@@ -24,7 +23,6 @@ class App extends React.Component {
             <Route component={NotFound}/>
           </Switch>
           <FooterMenu/>
-          <Footer/>
         </div>
       </Router>
     );
